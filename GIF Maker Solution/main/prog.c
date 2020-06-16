@@ -2,9 +2,7 @@
 
 int main(void)
 {
-
-	//Write your code here...
-
+	printf("hello world\n");
 	getchar();
 	return 0;
 }
