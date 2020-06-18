@@ -100,7 +100,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\משתמש\Documents\Magshimim\C1\semester 2\Assignment11\תרגיל 11\here\opencv\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\משתמש\Documents\Magshimim\C1\semester 2\Assignment11\תרגיל 11\here\opencv\build\include;C:\Users\משתמש\Documents\Magshimim\C1\semester 2\Assignment12\חניכים\Project\GIF-Maker\GIF Maker Solution\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -124,7 +124,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\קבצים לפרוייקט\view.c" />
+    <ClCompile Include="linkedList.c" />
     <ClCompile Include="prog.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="linkedList.h" />
+    <ClInclude Include="view.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
