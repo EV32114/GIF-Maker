@@ -1,11 +1,14 @@
 #ifndef LINKEDLISTH
 #define LINKEDLISTH
 
+#define _CRT_SECURE_NO_WARNINGS
+
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 
-#define FALSE 0
-#define TRUE !FALSE
+#define STR_LEN 100
 
 // Frame struct
 typedef struct Frame
@@ -22,5 +25,10 @@ typedef struct FrameNode
 	Frame* frame;
 	struct FrameNode* next;
 } FrameNode;
+
+FrameNode* initFrame();
+void myFgets(char str[], int n);
+bool nameTaken(char* name);
+FrameNode* createFrame(char* name, unsigned int duration, char* path);
 
 #endif
