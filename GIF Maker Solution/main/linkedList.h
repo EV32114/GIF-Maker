@@ -26,9 +26,9 @@ typedef struct FrameNode
 	struct FrameNode* next;
 } FrameNode;
 
-FrameNode* initFrame();
+FrameNode* initFrame(FrameNode* head);
 void myFgets(char str[], int n);
-bool nameTaken(char* name);
+bool nameTaken(char* name, FrameNode* head);
 FrameNode* createFrame(char* name, unsigned int duration, char* path);
 
 #endif

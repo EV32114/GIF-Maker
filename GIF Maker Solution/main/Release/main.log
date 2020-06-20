@@ -1,8 +1,7 @@
-﻿  view.c
-  linkedList.c
+﻿  prog.c
   Generating code
-  0 of 5 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
+  5 of 8 functions (62.5%) were compiled, the rest were copied from previous compilation.
+    1 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   main.vcxproj -> C:\Users\משתמש\Documents\Magshimim\C1\semester 2\Assignment12\חניכים\Project\GIF-Maker\GIF Maker Solution\Release\main.exe

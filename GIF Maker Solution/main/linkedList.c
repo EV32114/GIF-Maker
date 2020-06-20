@@ -1,6 +1,6 @@
 #include "linkedList.h"
 
-FrameNode* initFrame()
+FrameNode* initFrame(FrameNode* head)
 {
 	char name[STR_LEN] = { 0 };
 	unsigned int duration = 0;
@@ -14,7 +14,7 @@ FrameNode* initFrame()
 	getchar();
 	printf("Please choose a name for that frame:\n");
 	myFgets(name, STR_LEN);
-	while (nameTaken(name))
+	while (nameTaken(name, head))
 	{
 		printf("The name is already taken, please enter another name:\n");
 		myFgets(name, STR_LEN);
@@ -29,7 +29,7 @@ void myFgets(char str[], int n)
 	str[strcspn(str, "\n")] = 0;
 }
 
-bool nameTaken(char* name)
+bool nameTaken(char* name, FrameNode* head)
 {
 
 }
