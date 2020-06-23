@@ -1,11 +1,15 @@
-#include "view.h"
+//#include "view.h"
 #include "linkedList.h"
+
+enum choices{EXIT, ADD, REMOVE, LOCATION, DURATION, ALL_DURATION, PRINT, PLAY, SAVE};
 
 void printOptions();
 
 int main()
 {
 	int choice = 1;
+	FrameNode* head = NULL;
+	FrameNode* newFrame = NULL;
 	printf("Welcome to Magshimim Movie Maker! what would you like to do?\n");
 	// part 2
 	while (choice != 0)
@@ -14,6 +18,15 @@ int main()
 		printOptions();
 		scanf("%d", &choice);
 		getchar();
+		switch (choice)
+		{
+			case EXIT:
+				printf("Bye!\n");
+				break;
+			case ADD:
+				newFrame = initFrame(head);
+				break;
+		}
 	}
 
 	getchar();

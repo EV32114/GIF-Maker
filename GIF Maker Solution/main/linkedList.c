@@ -14,10 +14,13 @@ FrameNode* initFrame(FrameNode* head)
 	getchar();
 	printf("Please choose a name for that frame:\n");
 	myFgets(name, STR_LEN);
-	while (nameTaken(name, head))
+	if (head)
 	{
-		printf("The name is already taken, please enter another name:\n");
-		myFgets(name, STR_LEN);
+		while (nameTaken(name, head))
+		{
+			printf("The name is already taken, please enter another name:\n");
+			myFgets(name, STR_LEN);
+		}
 	}
 
 	return createFrame(name, duration, path);
@@ -31,7 +34,15 @@ void myFgets(char str[], int n)
 
 bool nameTaken(char* name, FrameNode* head)
 {
-
+	FrameNode* curr = head;
+	while (curr->next)
+	{
+		if (!strcmp(curr->frame->name, name))
+		{
+			return true;
+		}
+	}
+	return false;
 }
 
 FrameNode* createFrame(char* name, unsigned int duration, char* path)

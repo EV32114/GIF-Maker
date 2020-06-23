@@ -77,7 +77,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\משתמש\Documents\Magshimim\C1\semester 2\Assignment11\תרגיל 11\here\opencv\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\משתמש\Documents\Magshimim\C1\semester 2\Assignment11\תרגיל 11\here\opencv\build\include;C:\Users\משתמש\Documents\Magshimim\C1\semester 2\Assignment12\חניכים\Project\GIF-Maker\GIF Maker Solution\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>C:\Users\משתמש\Documents\Magshimim\C1\semester 2\Assignment11\תרגיל 11\here\opencv\build\x86\vc11\bin;C:\Users\משתמש\Documents\Magshimim\C1\semester 2\Assignment11\תרגיל 11\here\opencv\build\x86\vc12\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
