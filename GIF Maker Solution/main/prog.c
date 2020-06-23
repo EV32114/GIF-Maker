@@ -18,44 +18,45 @@ int main()
 		getchar();
 		switch (choice)
 		{
-		case EXIT:
-			printf("Bye!\n");
-			break;
-		case ADD:
-			newFrame = initFrame(head);
-			if (exists(newFrame->frame->path))
-			{
-				insertAtEnd(&head, newFrame);
-			}
-			else
-			{
-				printf("Error: File doesn't exist\n");
-			}
-			break;
-		case REMOVE:
-			removeFrame(&head);
-			break;
-		case LOCATION:
-			changeLocation(&head);
-			break;
-		case DURATION:
-			frameDuration(&head);
-			break;
-		case ALL_DURATION:
-			allFrameDuration(&head);
-			break;
-		case PRINT:
-			printList(head);
-			break;
-		case PLAY:
-			play(head);
-			break;
-		case SAVE:
-			//part2
-			break;
-		default:
-			printf("Invalid Input, please enter a number between 0-8\n");
-			break;
+			case EXIT:
+				printf("Bye!\n");
+				break;
+			case ADD:
+				newFrame = initFrame(head);
+				if (exists(newFrame->frame->path))
+				{
+					insertAtEnd(&head, newFrame);
+				}
+				else
+				{
+					printf("Error: File doesn't exist\n");
+					freeNode(newFrame);
+				}
+				break;
+			case REMOVE:
+				removeFrame(&head);
+				break;
+			case LOCATION:
+				changeLocation(&head);
+				break;
+			case DURATION:
+				frameDuration(&head);
+				break;
+			case ALL_DURATION:
+				allFrameDuration(&head);
+				break;
+			case PRINT:
+				printList(head);
+				break;
+			case PLAY:
+				play(head);
+				break;
+			case SAVE:
+				//part2
+				break;
+			default:
+				printf("Invalid Input, please enter a number between 0-8\n");
+				break;
 		}
 	}
 
@@ -64,6 +65,11 @@ int main()
 	return 0;
 }
 
+/*
+print the option for the user.
+Input: none.
+Output: none.
+*/
 void printOptions()
 {
 	printf(" [0] Exit\n");
