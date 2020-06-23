@@ -130,24 +130,6 @@ void printList(FrameNode* head)
 }
 
 /*
-check if a file exists.
-Input: file path.
-Output: True - if the file exists, False otherwise.
-*/
-bool exists(char *fileName)
-{
-	bool exist = false;
-	FILE *file;
-	file = fopen(fileName, "r");
-	if (file)
-	{
-		fclose(file);
-		exist = true;
-	}
-	return exist;
-}
-
-/*
 Remove a frame from the list.
 Input: head of linked list.
 Output: none.

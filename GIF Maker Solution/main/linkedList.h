@@ -31,7 +31,6 @@ typedef struct FrameNode
 FrameNode* initFrame(FrameNode* head);
 FrameNode* createFrame(char* name, unsigned int duration, char* path);
 void insertAtEnd(FrameNode** head, FrameNode* newNode);
-bool exists(char *fileName);
 
 void printList(FrameNode* head);
 

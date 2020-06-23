@@ -1,5 +1,6 @@
 #include "view.h"
 #include "linkedList.h"
+#include "files.h"
 
 void printOptions();
 
@@ -52,7 +53,7 @@ int main()
 				play(head);
 				break;
 			case SAVE:
-				//part2
+				saveFile(head);
 				break;
 			default:
 				printf("Invalid Input, please enter a number between 0-8\n");

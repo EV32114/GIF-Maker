@@ -124,11 +124,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="files.c" />
     <ClCompile Include="view.c" />
     <ClCompile Include="linkedList.c" />
     <ClCompile Include="prog.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="files.h" />
     <ClInclude Include="linkedList.h" />
     <ClInclude Include="view.h" />
   </ItemGroup>
