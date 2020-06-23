@@ -124,7 +124,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\קבצים לפרוייקט\view.c" />
+    <ClCompile Include="view.c" />
     <ClCompile Include="linkedList.c" />
     <ClCompile Include="prog.c" />
   </ItemGroup>
