@@ -18,10 +18,10 @@
     <ClCompile Include="prog.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\קבצים לפרוייקט\view.c">
+    <ClCompile Include="linkedList.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="linkedList.c">
+    <ClCompile Include="view.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
