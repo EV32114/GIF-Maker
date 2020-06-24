@@ -5,5 +5,6 @@
 
 bool exists(char *fileName);
 void saveFile(FrameNode* head);
+FrameNode* loadFile();
 
 #endif

@@ -7,10 +7,20 @@ void printOptions();
 int main()
 {
 	int choice = 1;
+	int loadFileChoice = 0;
 	FrameNode* head = NULL;
 	FrameNode* newFrame = NULL;
 	printf("Welcome to Magshimim Movie Maker! what would you like to do?\n");
-	// part 2
+	
+	printf(" [0] Create a new project\n");
+	printf(" [1] Load existing project\n");
+	scanf("%d", &loadFileChoice);
+	getchar();
+
+	if (loadFileChoice)
+	{
+		head = loadFile();
+	}
 	while (choice != 0)
 	{
 		printf("What would you like to do?\n");

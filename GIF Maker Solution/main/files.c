@@ -18,6 +18,11 @@ bool exists(char *fileName)
 	return exist;
 }
 
+/*
+save a gif to a file.
+Input: head of linked list.
+Output: none.
+*/
 void saveFile(FrameNode* head)
 {
 	FILE * log;
@@ -36,18 +41,32 @@ void saveFile(FrameNode* head)
 	fclose(log);
 }
 
+/*
+load an existing project.
+Input: none.
+Output: linked list with all loaded frames.
+*/
 FrameNode* loadFile()
 {
+	int counter = 0;
 	FrameNode* head = NULL;
+	FrameNode* curr = NULL;
 	char data[STR_LEN] = { 0 };
 	char path[STR_LEN] = { 0 };
+	char name[STR_LEN] = { 0 };
+	char framePath[STR_LEN] = { 0 };
+	char duration[STR_LEN] = { 0 };
 	char delim[2] = "#";
 	char* token = 0;
 	FILE * dataFile;
 
 	printf("Enter file path:\n");
 	myFgets(path, STR_LEN);
-
+	if (!exists(path))
+	{
+		printf("Error: File not found\n");
+		return head;
+	}
 	dataFile = fopen(path, "r");
 	while (fgets(data, STR_LEN, dataFile))
 	{
@@ -55,10 +74,34 @@ FrameNode* loadFile()
 		token = strtok(data, delim);
 		while (token)
 		{
-			printf(" %s\n", token);
+			counter++;
+			switch (counter)
+			{
+				case 1:
+					strcpy(name, token);
+					break;
+				case 2:
+					strcpy(duration, token);
+					break;
+				case 3:
+					strcpy(framePath, token);
+					break;
+			}
 
 			token = strtok(NULL, delim);
 		}
+		counter = 0;
+		if (!head)
+		{
+			head = createFrame(name, atoi(duration), framePath);
+			head->next = NULL;
+		}
+		else
+		{
+			curr = createFrame(name, atoi(duration), framePath);
+			insertAtEnd(&head, curr);
+		}
 	}
 	fclose(dataFile);
+	return head;
 }
